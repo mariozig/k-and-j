@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Kathleen &amp; Jonathan</title>
+  <link href="http://fonts.googleapis.com/css?family=Inconsolata:400,700|Montserrat:400,700" rel="stylesheet" type="text/css">
+  <style>
+
+    html, body, main, section, article, h1, h2, p, strong {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      outline: 0;
+      font: inherit;
+      vertical-align: baseline;
+      background: transparent;
+      box-sizing: border-box;
+      color: inherit;
+      background: transparent;
+    }
+
+    body {
+      font-size: 18px;
+      line-height: 1.0;
+      font-family: "Inconsolata", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: #f00;
+      background: #fff;
+    }
+
+    main, section, article {
+      border: 10px solid;
+      padding: 20px;
+      border-color: inherit;
+    }
+
+    main {
+      position: relative;
+      margin: 100px auto;
+      width: 620px;
+    }
+
+    article {
+      padding: 50px;
+    }
+
+    h1, h2, h3 {
+      font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 700;
+      font-size: 200px;
+      text-align: center;
+    }
+
+    h2 {
+      position: absolute;
+      top: -65px;
+      left: 0;
+      font-size: 40px;
+      width: 100%;
+    }
+
+    p {
+      line-height: 1.5;
+    }
+
+    strong {
+      font-weight: 700;
+    }
+
+  </style>
+</head>
+<body>
+
+  <main>
+    <section>
+      <article>
+        <h1 id="days"></h1>
+        <h2>K &amp; J</h2>
+        <p>
+          <strong>The fire of love stops at nothing</strong>
+          &mdash;it sweeps everything before it.
+          Flood waters can&rsquo;t drown love,
+          torrents of rain can&rsquo;t put it out.
+        </p>
+      </article>
+    </section>
+  </main>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script>
+
+var displayDays = function(){
+  var now = new Date();
+  var then = new Date(2013, 4, 7, 20);
+  var days = parseInt((now.getTime() - then.getTime()) / (86400 * 1000));
+  $("#days").html(days);
+}
+
+$(document).ready(function(){
+  displayDays();
+  swapColors();
+});
+
+</script>
+</body>
+</html>
